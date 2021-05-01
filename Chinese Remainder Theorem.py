@@ -1,5 +1,11 @@
 # Implement the algorithm to construct the number from the Chinese Remainder Theorem.
-
+def ExtendedEuclid(a, b):
+    if b == 0:
+        return (1, 0)
+    (x, y) = ExtendedEuclid(b, a % b)
+    k = a // b
+    return (y, x - k * y)
+    
 def ChineseRemainderTheorem(n1, r1, n2, r2):
   (x, y) = ExtendedEuclid(n1, n2)
   # 𝑛 = 𝑟𝑎⋅ 𝑏𝑦 + 𝑟𝑏⋅ 𝑎x

@@ -123,4 +123,3 @@ def DecipherCommonDivisor(first_ciphertext, first_modulo, first_exponent, second
   q1 = first_modulo // common_prime
   q2 = second_modulo // common_prime
   return (Decrypt(first_ciphertext, common_prime, q1, first_exponent), Decrypt(second_ciphertext, common_prime, q2, second_exponent))
-  return ("unknown message 1", "unknown message 2")
